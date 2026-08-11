@@ -1,53 +1,53 @@
-# Decision Register
+# Реестр решений
 
-This register is the canonical list of approved and superseded product decisions for B2B Platform.
+Этот реестр является каноническим списком утвержденных и замененных продуктовых решений B2B Platform.
 
-## Status model
+## Модель статусов
 
-- `Approved` — authoritative decision.
-- `Proposal` — working option, not authoritative.
-- `Needs clarification` — unresolved and requires input.
-- `Rejected` — explicitly rejected option.
-- `Superseded` — replaced by a newer decision.
+- `Approved` — утвержденное и обязательное решение.
+- `Proposal` — рабочий вариант, не является обязательным.
+- `Needs clarification` — вопрос не разрешен и требует уточнения.
+- `Rejected` — вариант явно отклонен.
+- `Superseded` — решение заменено более новым.
 
-## Decisions
+## Решения
 
-### DEC-001 — Warehouse is assigned to a trade point
+### DEC-001 — Склад назначается торговой точке
 
-- **Status:** Approved
-- **Decision:** A warehouse is assigned to each trade point (ТТ), not to the customer as a whole.
-- **Implication:** Warehouse-dependent catalog, stock and order checks must resolve the selected trade point first.
+- **Статус:** Approved
+- **Решение:** Каждой торговой точке (ТТ) назначается склад, а не клиенту в целом.
+- **Следствие:** Для проверок каталога, остатков и заказа, зависящих от склада, необходимо определить выбранную торговую точку.
 
-### DEC-002 — One trade point has one warehouse
+### DEC-002 — У одной торговой точки один склад
 
-- **Status:** Approved
-- **Decision:** A trade point cannot have multiple fulfillment warehouses at the same time.
-- **Implication:** Warehouse selection is not performed per line item or per order.
+- **Статус:** Approved
+- **Решение:** Торговая точка не может одновременно иметь несколько складов отгрузки.
+- **Следствие:** Склад не выбирается отдельно для каждой позиции или каждого заказа.
 
-### DEC-003 — One order is fulfilled from one warehouse
+### DEC-003 — Один заказ исполняется с одного склада
 
-- **Status:** Approved
-- **Decision:** An order belongs to one trade point and therefore one warehouse.
-- **Implication:** Multi-warehouse orders are out of scope for the current model.
-- **Implementation note:** The order should persist the warehouse identifier used at creation time so a later reassignment of the trade point does not mutate historical orders.
+- **Статус:** Approved
+- **Решение:** Заказ относится к одной торговой точке и, соответственно, к одному складу.
+- **Следствие:** Заказы с нескольких складов не входят в текущую модель.
+- **Примечание по реализации:** Заказ должен сохранять идентификатор склада, использованный при создании, чтобы последующая смена склада торговой точки не изменяла исторические заказы.
 
-### DEC-004 — Use available-to-order stock
+### DEC-004 — Используется доступный к заказу остаток
 
-- **Status:** Approved
-- **Decision:** The stock value relevant to the customer is the quantity currently allowed to be ordered from the warehouse assigned to the selected trade point.
-- **Open detail:** The exact calculation of available-to-order stock remains to be confirmed with the inventory/1C process owner.
+- **Статус:** Approved
+- **Решение:** Для клиента релевантен объем товара, который в данный момент разрешено заказать со склада, назначенного выбранной торговой точке.
+- **Открытая деталь:** Точный расчет доступного к заказу остатка необходимо подтвердить с владельцем складского процесса / процесса 1С.
 
-### DEC-005 — Stock is shown for the selected trade point warehouse
+### DEC-005 — Остаток отображается по складу выбранной торговой точки
 
-- **Status:** Approved
-- **Decision:** Stock displayed to the customer is sourced only from the warehouse assigned to the selected trade point.
-- **Implication:** Stock from all three warehouses must not be aggregated for customer display under the current fulfillment model.
+- **Статус:** Approved
+- **Решение:** Клиенту отображаются остатки только со склада, назначенного выбранной торговой точке.
+- **Следствие:** В текущей модели остатки всех трех складов не должны агрегироваться для отображения клиенту.
 
-## Change rule
+## Правило изменения решений
 
-Approved decisions are never silently overwritten. If an approved decision changes:
+Утвержденные решения не перезаписываются без сохранения истории. Если утвержденное решение меняется:
 
-1. create a new decision;
-2. mark the old decision `Superseded`;
-3. link the replacement decision;
-4. record the reason and affected requirements/processes.
+1. создается новое решение;
+2. старое решение получает статус `Superseded`;
+3. указывается ссылка на заменяющее решение;
+4. фиксируются причина изменения и затронутые требования/процессы.
