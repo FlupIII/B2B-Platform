@@ -1,38 +1,38 @@
-# Open Questions
+# Открытые вопросы
 
-This file tracks unresolved questions that can affect approved decisions, requirements, processes, UX or integrations.
+Этот файл содержит нерешенные вопросы, которые могут влиять на утвержденные решения, требования, процессы, UX или интеграции.
 
-## Q-001 — Ordering above available stock
+## Q-001 — Заказ сверх доступного остатка
 
-- **Status:** Open
-- **Question:** Can a customer order a quantity greater than the available-to-order stock of the warehouse assigned to the selected trade point?
-- **Impact:** Catalog, cart, order validation, statuses, account-manager workflow, 1C integration.
-- **Options under consideration:**
-  1. hard block;
-  2. allow only available quantity;
-  3. send for clarification/manual review;
-  4. backorder / order under future supply;
-  5. differentiated rule by product/customer.
+- **Статус:** Open
+- **Вопрос:** Может ли клиент заказать количество товара, превышающее доступный к заказу остаток склада, назначенного выбранной торговой точке?
+- **Влияние:** Каталог, корзина, проверка заказа, статусы, работа аккаунт-менеджера, интеграция с 1С.
+- **Рассматриваемые варианты:**
+  1. жесткая блокировка;
+  2. разрешить только доступное количество;
+  3. отправлять заказ на уточнение / ручную проверку;
+  4. разрешить заказ под будущую поставку;
+  5. применять разные правила в зависимости от товара или клиента.
 
-## Q-002 — Select trade point before or after building the cart
+## Q-002 — Выбор торговой точки до или после формирования корзины
 
-- **Status:** Open
-- **Question:** Should the customer be able to build a purchase draft before selecting a trade point?
-- **Constraint:** Stock and possibly assortment/prices depend on the warehouse assigned to the trade point.
-- **Current proposal:** Separate a pre-selection purchase draft from the validated cart. After selecting the trade point, resolve warehouse and revalidate stock, assortment, price and order constraints.
+- **Статус:** Open
+- **Вопрос:** Должен ли клиент иметь возможность сформировать черновик закупки до выбора торговой точки?
+- **Ограничение:** Остатки и, возможно, ассортимент/цены зависят от склада, назначенного торговой точке.
+- **Текущее предложение:** Разделить предварительный черновик закупки и подтвержденную корзину. После выбора торговой точки определить склад и повторно проверить остатки, ассортимент, цены и ограничения заказа.
 
-## Q-003 — Create a new trade point during checkout
+## Q-003 — Создание новой торговой точки во время оформления заказа
 
-- **Status:** Open
-- **Question:** Can the customer start creating a new trade point from checkout without creating an order before moderation is complete?
-- **Current proposal:** Preserve the purchase draft, moderate the trade point, assign the warehouse, then revalidate the draft and require customer confirmation before order creation.
+- **Статус:** Open
+- **Вопрос:** Может ли клиент начать создание новой торговой точки из процесса оформления, не создавая заказ до завершения модерации?
+- **Текущее предложение:** Сохранить черновик закупки, провести модерацию торговой точки, назначить склад, затем повторно проверить черновик и запросить подтверждение клиента перед созданием заказа.
 
-## Q-004 — Final order status model
+## Q-004 — Финальная статусная модель заказа
 
-- **Status:** Open
-- **Question:** What is the final set of order statuses and allowed transitions?
-- **Current recommendation:** Distinguish recoverable validation states from final outcomes. Use `Requires correction` for fixable validation failures, `Rejected` for final refusal, and `Cancelled` for a valid order deliberately cancelled by an authorized actor. Do not use `Deactivated` for orders.
+- **Статус:** Open
+- **Вопрос:** Какой набор статусов заказа и допустимых переходов между ними является финальным?
+- **Текущая рекомендация:** Отделять исправимые состояния проверки от финальных исходов. Использовать `Требует корректировки` для исправимых ошибок проверки, `Отклонен` для окончательного отказа и `Отменен` для корректного заказа, который был сознательно отменен уполномоченным участником. Не использовать `Деактивирован` для заказов.
 
-## Conflict handling rule
+## Правило обработки конфликтов
 
-If an open question is resolved in a way that conflicts with an approved decision, the conflict must be recorded before any affected decision is superseded.
+Если открытый вопрос разрешается способом, который конфликтует с утвержденным решением, конфликт должен быть зафиксирован до того, как затронутое решение будет заменено.
