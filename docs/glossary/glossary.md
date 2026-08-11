@@ -1,27 +1,27 @@
-# Glossary
+# Глоссарий
 
-Shared terminology for B2B Platform.
+Общая терминология проекта B2B Platform.
 
-## Customer
+## Клиент
 
-Business customer using B2B Platform.
+Бизнес-клиент, использующий B2B Platform.
 
-## Trade point (ТТ)
+## Торговая точка (ТТ)
 
-A customer trade point used as the fulfillment context for an order. Under DEC-001 and DEC-002, each trade point has exactly one assigned warehouse at a time.
+Торговая точка клиента, используемая как контекст исполнения заказа. Согласно DEC-001 и DEC-002, каждой торговой точке в каждый момент времени назначен ровно один склад.
 
-## Warehouse
+## Склад
 
-Fulfillment warehouse assigned to a trade point.
+Склад отгрузки, назначенный торговой точке.
 
-## Available-to-order stock
+## Доступный к заказу остаток
 
-Quantity of a product currently allowed to be ordered from the warehouse assigned to the selected trade point. The exact calculation is not yet finalized.
+Количество товара, которое в данный момент разрешено заказать со склада, назначенного выбранной торговой точке. Точный расчет пока не финализирован.
 
-## Purchase draft
+## Черновик закупки
 
-Working concept for a list of desired products/quantities collected before a trade point is selected and warehouse-dependent checks are performed. This concept is not yet approved and is linked to Q-002.
+Рабочее понятие для списка желаемых товаров и количеств, сформированного до выбора торговой точки и выполнения проверок, зависящих от склада. Понятие пока не утверждено и связано с Q-002.
 
-## Validated cart
+## Подтвержденная корзина
 
-Working concept for a cart after trade point selection and warehouse-dependent validation of stock, assortment, prices and constraints. This concept is not yet approved and is linked to Q-002.
+Рабочее понятие для корзины после выбора торговой точки и выполнения проверок остатков, ассортимента, цен и ограничений, зависящих от склада. Понятие пока не утверждено и связано с Q-002.
