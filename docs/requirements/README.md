@@ -1,20 +1,20 @@
-# Requirements
+# Требования
 
-Store business and product requirements here.
+Здесь хранятся бизнес- и продуктовые требования.
 
-Each requirement should include:
+Каждое требование должно содержать:
 
-- ID (`BR-xxx` or another agreed prefix);
-- title;
-- status;
-- business goal;
-- description;
-- actors/stakeholders;
-- preconditions and trigger;
-- main and alternative scenarios where applicable;
-- constraints and exceptions;
-- acceptance criteria;
-- related business rules;
-- related decisions;
-- source/evidence;
-- confidence and review flag when the requirement is not fully approved.
+- ID (`BR-xxx` или другой согласованный префикс);
+- название;
+- статус;
+- бизнес-цель;
+- описание;
+- участников / стейкхолдеров;
+- предусловия и триггер;
+- основной и альтернативные сценарии, если применимо;
+- ограничения и исключения;
+- критерии приемки;
+- связанные бизнес-правила;
+- связанные решения;
+- источник / подтверждающие материалы;
+- `confidence` и флаг необходимости review, если требование еще не полностью утверждено.
