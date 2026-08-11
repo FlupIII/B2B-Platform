@@ -1,17 +1,17 @@
-# Processes
+# Процессы
 
-Store end-to-end business and user process descriptions here.
+Здесь хранятся сквозные описания бизнес- и пользовательских процессов.
 
-Each process should identify:
+Каждый процесс должен содержать:
 
-- purpose and scope;
-- actors;
-- preconditions;
-- trigger;
-- main flow;
-- alternative/error flows;
-- business rules;
-- statuses and transitions;
-- related requirements;
-- related decisions;
-- open questions and known conflicts.
+- цель и границы;
+- участников;
+- предусловия;
+- триггер;
+- основной поток;
+- альтернативные и ошибочные потоки;
+- бизнес-правила;
+- статусы и переходы;
+- связанные требования;
+- связанные решения;
+- открытые вопросы и известные конфликты.
