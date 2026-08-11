@@ -1,31 +1,31 @@
-# B2B Platform Documentation
+# Документация B2B Platform
 
-This directory is the working source of truth for product decisions and requirements.
+Эта директория является рабочим источником истины для продуктовых решений и требований.
 
-## Structure
+## Структура
 
-- `decisions/` — approved, rejected and superseded decisions.
-- `requirements/` — business and product requirements derived from approved decisions.
-- `business-rules/` — reusable domain rules and constraints.
-- `processes/` — end-to-end process and scenario descriptions.
-- `open-questions/` — unresolved questions and known conflicts.
-- `glossary/` — shared domain terminology.
+- `decisions/` — утвержденные, отклоненные и замененные решения.
+- `requirements/` — бизнес- и продуктовые требования, сформированные на основе утвержденных решений.
+- `business-rules/` — переиспользуемые бизнес-правила и ограничения предметной области.
+- `processes/` — сквозные описания процессов и сценариев.
+- `open-questions/` — нерешенные вопросы и известные конфликты.
+- `glossary/` — единая терминология предметной области.
 
-## Working rules
+## Правила работы
 
-1. A proposal does not become authoritative until explicitly approved.
-2. Every approved decision is checked against existing decisions, requirements, business rules and processes for conflicts.
-3. Approved decisions are never silently overwritten; changed decisions are superseded with traceable history.
-4. Requirements and process documents must reference the decisions that justify them where applicable.
-5. Open conflicts remain visible until explicitly resolved.
-6. Each substantial topic should be discussed in a separate ChatGPT project chat to reduce context mixing.
+1. Предложение не становится обязательным решением, пока оно явно не утверждено.
+2. Каждое утвержденное решение проверяется на конфликты с существующими решениями, требованиями, бизнес-правилами и процессами.
+3. Утвержденные решения никогда не перезаписываются без сохранения истории; измененные решения получают статус `Superseded` с трассируемой связью на заменяющее решение.
+4. Требования и описания процессов должны ссылаться на решения, на которых они основаны, когда такая связь существует.
+5. Открытые конфликты остаются явно зафиксированными до их разрешения.
+6. Каждая существенная тема должна обсуждаться в отдельном чате проекта ChatGPT, чтобы не смешивать контекст разных областей.
 
-## Source precedence
+## Приоритет источников
 
-When sources disagree, use this order unless an explicit newer approval says otherwise:
+Если источники противоречат друг другу, используется следующий порядок, если более новое явно утвержденное решение не устанавливает иное:
 
-1. latest approved decision in this repository;
-2. approved requirement or process aligned with that decision;
-3. recorded stakeholder/meeting decision;
-4. proposal or working draft;
-5. raw notes.
+1. последнее утвержденное решение в этом репозитории;
+2. утвержденное требование или процесс, согласованный с этим решением;
+3. зафиксированное решение стейкхолдера или встречи;
+4. предложение или рабочий черновик;
+5. сырые заметки.
