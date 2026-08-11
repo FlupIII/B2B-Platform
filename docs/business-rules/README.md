@@ -1,17 +1,17 @@
-# Business Rules
+# Бизнес-правила
 
-Store reusable domain rules here.
+Здесь хранятся переиспользуемые правила предметной области.
 
-Each rule should include:
+Каждое правило должно содержать:
 
 - ID (`RULE-xxx`);
-- title;
-- status;
-- rule statement;
-- applicability conditions;
-- exceptions;
-- conflict priority where relevant;
-- examples/counterexamples;
-- related requirements;
-- related decisions;
-- source/evidence.
+- название;
+- статус;
+- формулировку правила;
+- условия применимости;
+- исключения;
+- приоритет при конфликте, если применимо;
+- примеры / контрпримеры;
+- связанные требования;
+- связанные решения;
+- источник / подтверждающие материалы.
